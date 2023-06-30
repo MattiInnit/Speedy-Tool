@@ -1,0 +1,2 @@
+type "ss" to open ss based folders
+type "logs" to view all accounts of a player
