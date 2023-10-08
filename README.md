@@ -1,13 +1,15 @@
 # Speedy-Tool
 
-**ISTRUZIONI**
+## ISTRUZIONI
 #### Scrivi "ss" per andare nella schermata SCREENSHARE.
 #### Scrivi "logs" per andare nella schermata MULTIACCOUNT.
 #### Scrivi "tools/download" per andare nella schermata TOOLS DOWNLOAD.
 #### Scrivi "home" in qualsiasi schermata per tornare alla HOME.
 #### Scrivi "quit" alla home per ELIMINARE il tool.
 
-**CONDIZIONI D'USO**
+
+## CONDIZIONI D'USO
+
 #### Si richiede il rispetto delle seguenti condizioni in relazione all'utilizzo del tool fornito:
 
   1. **Crediti dell'Autore:** Non è permesso modificare o rimuovere i crediti dell'autore. Qualsiasi violazione di questa disposizione può comportare azioni legali.
