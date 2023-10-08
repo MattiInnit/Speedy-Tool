@@ -92,8 +92,6 @@ if %inputss% == 3 start C:\$Recycle.Bin
 if %inputss% == 4 start %temp%
 if %inputss% == 5 goto fileeliminati
 if %inputss% == 6 goto filerinominati
-if %inputss% == 1933 msg * "Francy say: NEIN NEIN NEIN NEIN NEIN"
-if %inputss% == 33 msg * "Francy say: NEIN NEIN NEIN NEIN NEIN"
 goto ScreenShare
 
 :: ---------------------------COMANDO MULTIACCOUNT-------------------------------------------
