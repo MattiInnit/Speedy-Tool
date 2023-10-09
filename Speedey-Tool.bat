@@ -133,6 +133,7 @@ if %inputmacro% == 3 goto LocalRazer
 if %inputmacro% == 4 goto Corsair
 if %inputmacro% == 5 goto GloriousModelO
 if %inputmacro% == 6 goto Aukey
+if %inputmacro% == home goto main 
 
 echo this isn't a valid code, try again
 ping localhost -n 2 >nul
