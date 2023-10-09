@@ -28,6 +28,8 @@ set /p home=Entra in una sezione:
 
 if %home% == clear goto main
 if %home% == ss goto ScreenShare
+if %home% == macro goto Macro
+if %home% == macros goto Macro
 if %home% == screenshare goto ScreenShare
 if %home% == logs goto ControlliLogs
 if %home% == log goto ControlliLogs
@@ -94,7 +96,47 @@ if %inputss% == 5 goto fileeliminati
 if %inputss% == 6 goto filerinominati
 if %inputss% == 1933 msg * "Francy say: NEIN NEIN NEIN NEIN NEIN"
 if %inputss% == 33 msg * "Francy say: NEIN NEIN NEIN NEIN NEIN"
+
+echo this isn't a valid code, try again
+ping localhost -n 2 >nul
 goto ScreenShare
+
+:: ---------------------------COMANDO MACRO------------------------------------------------
+
+:Macro
+chcp 65001 >nul
+color D
+cls
+echo  ███▄ ▄███▓ ▄▄▄       ▄████▄   ██▀███   ▒█████    ██████ 
+echo ▓██▒▀█▀ ██▒▒████▄    ▒██▀ ▀█  ▓██ ▒ ██▒▒██▒  ██▒▒██    ▒ 
+echo ▓██    ▓██░▒██  ▀█▄  ▒▓█    ▄ ▓██ ░▄█ ▒▒██░  ██▒░ ▓██▄   
+echo ▒██    ▒██ ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▒██▀▀█▄  ▒██   ██░  ▒   ██▒
+echo ▒██▒   ░██▒ ▓█   ▓██▒▒ ▓███▀ ░░██▓ ▒██▒░ ████▓▒░▒██████▒▒
+echo ░ ▒░   ░  ░ ▒▒   ▓▒█░░ ░▒ ▒  ░░ ▒▓ ░▒▓░░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░
+echo ░  ░      ░  ▒   ▒▒ ░  ░  ▒     ░▒ ░ ▒░  ░ ▒ ▒░ ░ ░▒  ░ ░
+echo ░      ░     ░   ▒   ░          ░░   ░ ░ ░ ░ ▒  ░  ░  ░  
+echo        ░         ░  ░░ ░         ░         ░ ░        ░  
+echo                      ░                                   
+
+echo --------------------------------
+echo [1] LGHUB
+echo [2] ProgramRazer
+echo [3] LocalRazer
+echo [4] Crosair
+echo [5] Glorious Model O
+echo [6] Aukey
+echo --------------------------------
+set /p inputmacro=Seleziona la macro: 
+if %inputmacro% == 1 goto LGHUB
+if %inputmacro% == 2 goto ProgramRazer
+if %inputmacro% == 3 goto LocalRazer
+if %inputmacro% == 4 goto Corsair
+if %inputmacro% == 5 goto GloriousModelO
+if %inputmacro% == 6 goto Aukey
+
+echo this isn't a valid code, try again
+ping localhost -n 2 >nul
+goto Macro
 
 :: ---------------------------COMANDO MULTIACCOUNT-------------------------------------------
 
@@ -125,6 +167,9 @@ if %inputlogs% == 1 start %appdata%/.minecraft/usercache.json
 if %inputlogs% == 2 start C:\$Recycle.Bin
 if %inputlogs% == 3 goto logseliminati
 if %inputlogs% == home goto main
+
+echo this isn't a valid code, try again
+ping localhost -n 2 >nul
 goto ControlliLogs
 
 :: ---------------------------COMANDO DOWNLOADS---------------------------------
@@ -155,7 +200,85 @@ if %downloadtools% == 2 start https://www.voidtools.com/Everything-1.4.1.1024.x6
 if %downloadtools% == 3 start https://github.com/deathmarine/Luyten/releases/download/v0.5.4_Rebuilt_with_Latest_depenencies/luyten-0.5.4.exe
 if %downloadtools% == 4 start https://www.nirsoft.net/utils/winprefetchview-x64.zip
 if %downloadtools% == home goto main
+
+echo this isn't a valid code, try again
+ping localhost -n 2 >nul
 goto DownloadTools
+
+:: ---------------Macro path-------------------------
+
+:LGHUB
+if exist "%localappdata%\LGHUB" (
+goto LGHUBFound
+) else (
+goto NotFound
+)
+
+:ProgramRazer
+if exist "%programdata%\Razer\Synapse\Accounts" (
+goto ProgramRazerFound
+) else (
+goto NotFound
+)
+
+:LocalRazer
+if exist "%localappdata%\Razer\Synapse3\Settings" (
+goto LocalRazerFound
+) else (
+goto NotFound
+)
+
+:Corsair
+if exist "%appdata%\Corsair\Cue" (
+goto CorsairFound
+) else (
+goto NotFound
+)
+
+:GloriousModelO
+if exist "%localappdata%\BY-COMBO2" (
+goto GloriousModelOFound
+) else (
+goto NotFound
+)
+
+:Aukey
+if exist "%localappdata%\JM01" (
+goto AukeyFound
+) else (
+goto NotFound
+)
+
+:: -------------------MACRO STUFF----------------
+
+:LGHUBFound
+explorer "%localappdata%\LGHUB"
+goto Macro
+
+:ProgramRazerFound
+explorer "%programdata%\Razer\Synapse\Accounts"
+goto Macro
+
+:LocalRazerFound
+explorer "%localappdata%\Razer\Synapse3\Settings"
+goto Macro
+
+:CorsairFound
+explorer "%appdata%\Corsair\Cue"
+goto Macro
+
+:GloriousModelOFound
+explorer "%localappdata%\BY-COMBO2"
+goto Macro
+
+:AukeyFound
+explorer "%localappdata%\JM01"
+goto Macro
+
+:NotFound
+echo Non è stato trovato nulla.
+ping localhost -n 4 >nul
+goto Macro
 
 ::------------------PROCESSO LOOP---------------------
 
