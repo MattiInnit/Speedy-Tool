@@ -57,9 +57,11 @@ goto ScreenShare
 
 :logseliminati
 fsutil usn readjournal c: csv | findstr /i /C:”0x80000200” | findstr /i /C:”latest.log” /i /C:”.log.gz” /i /C:”launcher_profiles.json” /i /C:”usernamecache.json” /i /C:”shig.inima” /i /C:”launcher_accounts.json” > %homepath%\Documents\Temp\logseliminati.txt
-"%homepath%\Documents\Temp\logseliminati.txt
+"%homepath%\Documents\Temp\logseliminati.txt"
 goto ControlliLogs
 
+:bamentries
+:: -----------------LAVORAZIONE-------------
 
 :: ------------------COMANDO SS-------------------------
 
@@ -78,22 +80,24 @@ echo ░  ░  ░  ░          ░░   ░    ░      ░      ░   ░ ░
 echo       ░  ░ ░         ░        ░  ░   ░  ░         ░       ░   ░  ░  ░      ░  ░   ░        ░  ░
 echo          ░                                                                                     
 
-echo --------------------------------
+echo -----------------
 echo [1] prefetch
 echo [2] shell:recent
 echo [3] Recycle Bin
 echo [4] temp
-echo [5] Eliminati
-echo [6] Rinominati
-echo --------------------------------
+echo [5] Soon...
+echo [6] Eliminati
+echo [7] Rinominati
+echo -----------------
 set /p inputss=Seleziona cosa vuoi controllare: 
 if %inputss% == home goto main
 if %inputss% == 1 start prefetch
 if %inputss% == 2 start shell:recent
 if %inputss% == 3 start C:\$Recycle.Bin
 if %inputss% == 4 start %temp%
-if %inputss% == 5 goto fileeliminati
-if %inputss% == 6 goto filerinominati
+if %inputss% == 5 goto bamentries
+if %inputss% == 6 goto fileeliminati
+if %inputss% == 7 goto filerinominati
 if %inputss% == 1933 msg * "Francy say: NEIN NEIN NEIN NEIN NEIN"
 if %inputss% == 33 msg * "Francy say: NEIN NEIN NEIN NEIN NEIN"
 
@@ -118,14 +122,14 @@ echo ░      ░     ░   ▒   ░          ░░   ░ ░ ░ ░ ▒  ░
 echo        ░         ░  ░░ ░         ░         ░ ░        ░  
 echo                      ░                                   
 
-echo --------------------------------
+echo ---------------------
 echo [1] LGHUB
 echo [2] ProgramRazer
 echo [3] LocalRazer
 echo [4] Crosair
 echo [5] Glorious Model O
 echo [6] Aukey
-echo --------------------------------
+echo ---------------------
 set /p inputmacro=Seleziona la macro: 
 if %inputmacro% == 1 goto LGHUB
 if %inputmacro% == 2 goto ProgramRazer
@@ -156,11 +160,11 @@ echo ░      ░    ░░░ ░ ░   ░ ░   ░       ▒ ░  ░   ▒ 
 echo        ░      ░         ░  ░        ░        ░  ░░ ░      ░ ░          ░ ░     ░              ░          
 echo                                                  ░        ░                                              
 
-echo --------------------------------
+echo -------------------
 echo [1] Accounts/Nomi
 echo [2] Recycle Bin
 echo [3] Logs Eliminati
-echo --------------------------------
+echo -------------------
 set /p inputlogs=Seleziona cosa vuoi controllare: 
 if %inputlogs% == 1 start %appdata%/.minecraft/TlauncherProfiles.json
 if %inputlogs% == 1 start %appdata%/.minecraft/usernamecache.json
@@ -189,12 +193,12 @@ echo     ░      ░ ▒ ▒░   ░ ▒ ▒░ ░ ░ ▒  ░░ ░▒  �
 echo   ░ᶠᶦᶻᶻʸ ░ ░ ░ ▒  ░ ░ ░ ▒    ░ ░   ░  ░  ░  
 echo              ░ ░      ░ ░      ░  ░      ░  
 
-echo --------------------------------
+echo --------------------
 echo [1] Process Hacker
 echo [2] Everything
 echo [3] Luyten
 echo [4] WinPrefetchView
-echo --------------------------------
+echo --------------------
 set /p downloadtools=Seleziona cosa vuoi scaricare: 
 if %downloadtools% == 1 start https://download.fileeagle.com/files/2016/03/processhacker-2.39-setup.exe
 if %downloadtools% == 2 start https://www.voidtools.com/Everything-1.4.1.1024.x64-Setup.exe
